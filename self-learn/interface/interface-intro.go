@@ -8,7 +8,7 @@ import (
 // seperti abstract class di java
 // kedua method di dalam interface harus diimplementasikan semua ke dalam struct,
 // jika tidak, akan error
-type hitung interface {
+type hitungLama interface {
 	luas() float64
 	keliling() float64
 }
@@ -55,7 +55,7 @@ func (s segitiga) keliling() float64 {
 }
 
 func intro() {
-	var bangunDatar hitung
+	var bangunDatar hitungLama
 
 	bangunDatar = persegi{10.0}
 	fmt.Println("===== persegi")
