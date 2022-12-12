@@ -2,7 +2,7 @@ package typedata
 
 import "fmt"
 
-func MapPart1() {
+func MapPartOne() {
 	// Array -> index/key berupa angka
 	// Map -> index/key bebas (seperti dictionary)
 	// membuat map dengan nama variabel myMap dengna key bertipe data string
