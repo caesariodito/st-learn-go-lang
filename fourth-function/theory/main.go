@@ -25,6 +25,8 @@ func greet(name string) {
 	fmt.Println("Hello,", name)
 }
 
-func add(a int, b int) int {
+// bisa mempersingkat parameter dengan tipe data variabel yang sama
+// func add(a int, b int) int {
+func add(a, b int) int {
 	return a+b
 }
