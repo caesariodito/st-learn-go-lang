@@ -4,6 +4,7 @@ func main() {
 
 	// typedata.Array()
 	// typedata.Slice()
+	// typedata.MapPartOne()
 
-	
+
 }
