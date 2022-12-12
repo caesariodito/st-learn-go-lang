@@ -20,6 +20,10 @@ func main() {
 	surface, circumference := calculate(5,5)
 	fmt.Println(surface, circumference)
 
+	// predefined return values
+	surface2, circumference2 := calculate2(5,5)
+	fmt.Println(surface2, circumference2)
+
 }
 
 func helloWorld() {
@@ -41,4 +45,11 @@ func calculate(h, w int) (int, int) {
 	surface := h * w
 	circumference := 2 * (h + w)
 	return surface, circumference
+}
+
+// predefined return value
+func calculate2(h, w int) (surface int, circumference int) {
+	surface = h * w
+	circumference = 2 * (h + w)
+	return
 }
