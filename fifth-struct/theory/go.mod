@@ -1,3 +1,3 @@
-module struct
+module parts
 
 go 1.19

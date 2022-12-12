@@ -2,7 +2,6 @@ package main
 
 import "fmt"
 
-// creating struct
 type User struct {
 	ID        int
 	FirstName string
@@ -12,25 +11,14 @@ type User struct {
 }
 
 func main() {
-	user := User{}
-	user.ID = 1
-	user.FirstName = "John"
-	user.LastName = "Doe"
-	user.Email = "john.doe@gmail.com"
-	user.IsActive = true
-	fmt.Println(user.FirstName)
+	// parts.CreateStructExample()
 
-	user2 := User{
-		// bisa diacak
-		LastName:  "Bambang",
-		ID:        2,
-		FirstName: "Zelda",
-		IsActive:  true,
-		Email:     "bambang@gmail.com",
-	}
-	fmt.Println(user2.FirstName)
+	user := User{3, "Agus", "Susanto", "agus@gmail.com", true}
+	display := displayUser(user)
+	fmt.Println(display)
+}
 
-	// gabisa diacak
-	user3 := User{3, "Agus", "Susanto", "agus@gmail.com", true}
-	fmt.Println(user3)
+func displayUser(user User) (result string) {
+	result = fmt.Sprintf("Name: %s %s, Email: %s", user.FirstName, user.LastName, user.Email)
+	return
 }
