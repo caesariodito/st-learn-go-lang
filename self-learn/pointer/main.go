@@ -24,4 +24,21 @@ func main() {
 	var numberC int = *numberB
 	fmt.Println(numberC)
 
+	numberA = 5
+
+	fmt.Println("numberA (value)   :", numberA)
+	fmt.Println("numberA (address) :", &numberA)
+	fmt.Println("numberB (value)   :", *numberB)
+	fmt.Println("numberB (address) :", numberB)
+
+	numberD := &numberA
+
+	change(numberD, 7)
+
+	fmt.Println(numberA)
+}
+
+// take the original address of a variable and change the value of it (not the address).
+func change(original *int, value int) {
+	*original = value
 }
