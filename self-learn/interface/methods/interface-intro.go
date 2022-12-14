@@ -1,4 +1,4 @@
-package main
+package methods
 
 import (
 	"fmt"
@@ -54,7 +54,7 @@ func (s segitiga) keliling() float64 {
 	return 0
 }
 
-func intro() {
+func Intro() {
 	var bangunDatar hitungLama
 
 	bangunDatar = persegi{10.0}
