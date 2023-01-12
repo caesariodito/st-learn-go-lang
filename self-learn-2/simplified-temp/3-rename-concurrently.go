@@ -111,16 +111,12 @@ func renameAndCalculate(chanIn <-chan FileInfo, numberOfWorkers int) <-chan File
 			go func(workerIndex int) {
 
 				for fileInfo := range chanIn {
-					// log
-					// log.Println("worker", workerIndex, "working on", fileInfo.FilePath, "file calculate and renaming")
-
 					// calculate
 					fileInfo.FileName = fmt.Sprintf("%x", md5.Sum(fileInfo.Content))
 
 					// rename
 					newPath := filepath.Join(tempPath, fmt.Sprintf("file-%s.txt", fileInfo.FileName))
 					err := os.Rename(fileInfo.FilePath, newPath)
-					fileInfo.FilePath = newPath
 					fileInfo.Err = err
 					fileInfo.WorkerIndex = workerIndex
 
